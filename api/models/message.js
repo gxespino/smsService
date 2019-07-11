@@ -12,10 +12,8 @@ Message.createMessage = function(newMessage, result) {
   connection.query("INSERT INTO text set ?", newMessage, function(err, res) {
 
     if(err) {
-      console.log("error: ", err);
       result(err, null);
     } else {
-      console.log(res.insertId);
       result(null, res.insertId);
     }
   });
@@ -30,11 +28,8 @@ Message.getAllMessages = function(searchParams, result) {
   connection.query(sql, [to, from, maxMessages], function(err, res) {
 
     if(err) {
-      console.log("error: ", err);
       result(null, err);
     } else {
-      console.log('messages : ', res);
-
       result(null, res);
     }
   });

@@ -2,9 +2,7 @@
 
 ## Info
 
-Code is set up to run on remote test server from the start.
-
-To run locally, change the connection settings in `api/models/db.js`
+Make sure to change the connection settings in `api/models/db.js` to your needs
 
 ## To Run
 
@@ -33,7 +31,7 @@ With body:
 
 `GET http://localhost:4000/messages?to=1234567899&from=9876543211&maxMessages=5`
 
-### Thoughts
+## Thoughts
 
 A lot of improvements are needed to make this production ready:
 

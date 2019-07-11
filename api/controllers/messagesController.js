@@ -5,8 +5,6 @@ var Message = require('../models/message.js');
 exports.create_a_message = function(req, res) {
   var new_message = new Message(req.body);
 
-  console.log(new_message)
-
   if(!new_message.body || !new_message.from_phone || !new_message.to_phone) {
     res.status(400).send({
       error: true,
